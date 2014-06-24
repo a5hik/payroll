@@ -17,7 +17,7 @@ Articles.register(function(app, auth, database) {
     Articles.routes(app, auth, database);
 
     //We are adding a link to the main menu for all authenticated users
-    Articles.menus.add({
+    /*Articles.menus.add({
         'roles': ['authenticated'],
         'title': 'Articles',
         'link': 'all articles'
@@ -26,7 +26,7 @@ Articles.register(function(app, auth, database) {
         'roles': ['authenticated'],
         'title': 'Create New Article',
         'link': 'create article'
-    });
+    });*/
 
     /*
     //Uncomment to use. Requires meanio@0.3.7 or above
