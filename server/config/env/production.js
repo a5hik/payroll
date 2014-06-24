@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://payroll:payroll@kahana.mongohq.com:10075/payroll',
     app: {
-        name: 'MEAN - A Modern Stack - Production'
+        name: 'Employee Payroll Management System'
     },
     facebook: {
         clientID: 'APP_ID',
