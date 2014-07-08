@@ -1,0 +1,28 @@
+<section data-ng-controller="CompanyController">
+    <form name="companyForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(companyForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.title.$invalid }">
+            <label mean-token="'create-title'" class="col-md-3 control-label">Title</label>
+            <div class="col-md-9">
+                <input name="title" type="text" class="form-control" data-ng-model="title" id="title" placeholder="Title" required>
+                <div ng-show="submitted && companyForm.title.$invalid" class="help-block">
+                    <p ng-show="companyForm.title.$error.required">Title is required</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && companyForm.content.$invalid }">
+            <label mean-token="'create-content'" for="content" class="col-md-3 control-label">Content</label>
+            <div class="col-md-9">
+                <textarea name="content" data-ng-model="content" id="content" cols="30" rows="10" placeholder="Content" class="form-control" required></textarea>
+                <div ng-show="submitted && companyForm.content.$invalid" class="help-block">
+                    <p ng-show="companyForm.content.$error.required">Content is required</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <button type="submit" class="btn btn-info">Submit</button>
+            </div>
+        </div>
+    </form>
+</section>

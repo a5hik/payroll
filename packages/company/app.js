@@ -18,8 +18,8 @@ Company.register(function(app, auth, database) {
 
     //We are adding a link to the main menu for all authenticated users
     Company.menus.add({
-        title: 'Company Settings',
-        link: 'Company',
+        title: 'Company',
+        link: 'all companies',
         roles: ['authenticated'],
         menu: 'main'
     });
@@ -45,6 +45,7 @@ Company.register(function(app, auth, database) {
         //you now have the settings object
     });
     */
+    Company.aggregateAsset('css', 'company.css');
 
     return Company;
 });

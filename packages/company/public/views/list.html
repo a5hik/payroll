@@ -1,0 +1,21 @@
+<section data-ng-controller="CompanyController" data-ng-init="find()">
+    <ul class="companies unstyled">
+        <li data-ng-repeat="company in companies">
+            <span>{{article.created | date:'medium'}}</span> /
+            <span>{{article.user.name}}</span>
+            <h2>
+                <a data-ng-href="#!/company/{{company._id}}">{{company.title}}</a>
+                <span data-ng-if="hasAuthorization(company)">
+                    <a class="btn" href="/#!/company/{{company._id}}/edit">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </a>
+                    <a class="btn" data-ng-click="remove(company);">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </span>
+            </h2>
+            <div>{{company.content}}</div>
+        </li>
+    </ul>
+    <h1 data-ng-hide="!companies || companies.length">No companies yet. <a href="/#!/company/create">Create One</a>?</h1>
+</section>
